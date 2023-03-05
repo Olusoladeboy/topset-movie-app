@@ -1,33 +1,33 @@
 export type AppProps = {
-    message: string;
-    count: number;
-    disabled: boolean;
+    message?: string;
+    count?: number;
+    disabled?: boolean;
     /** array of a type! */
-    names: string[];
+    names?: string[];
     /** string literals to specify exact string values, with a union type to join them together */
-    status: "waiting" | "success";
+    status?: "waiting" | "success";
     /** an object with known properties (but could have more at runtime) */
-    obj: {
-        id: string;
-        title: string;
+    obj?: {
+        id?: string;
+        title?: string;
     };
     /** array of objects! (common) */
-    objArr: {
-        id: string;
-        title: string;
+    objArr?: {
+        id?: string;
+        title?: string;
     }[];
     /** any non-primitive value - can't access any properties (NOT COMMON but useful as placeholder) */
-    obj2: object;
+    obj2?: object;
     /** an interface with no required properties - (NOT COMMON, except for things like `React.Component<{}, State>`) */
-    obj3: {};
+    obj3?: {};
     /** a dict object with any number of properties of the same type */
     /** function type syntax that takes an event (VERY COMMON) */
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (event?: React.ChangeEvent<HTMLInputElement>) => void;
     /** alternative function type syntax that takes an event (VERY COMMON) */
-    onClick(event: React.MouseEvent<HTMLButtonElement>): void;
+    onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
     /** any function as long as you don't invoke it (not recommended) */
-    onSomething: Function;
+    onSomething?: Function;
     /** an optional prop (VERY COMMON!) */
     /** when passing down the state setter function returned by `useState` to a child component. `number` is an example, swap out with whatever the type of your state */
-    setState: React.Dispatch<React.SetStateAction<number>>;
+    setState?: React.Dispatch<React.SetStateAction<number>>;
 };
