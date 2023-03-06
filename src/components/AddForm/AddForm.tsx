@@ -41,15 +41,6 @@ export const AddForm = () => {
       .catch((err) => {
         console.log("Error Happened", err);
       });
-    // axios
-    //   .post(`${import.meta.env.VITE_API_URL}`, form)
-    //   .then(function (response) {
-    //     console.log({ response });
-    //     // navigate("/");
-    //   })
-    //   .catch(function (error) {
-    //     console.log({ error });
-    //   });
   };
   return (
     <div className="min-h-screen py-6 flex flex-col sm:py-12">
