@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AppProps } from "../../interfaces/general.interface";
+import { Link } from "react-router-dom";
 
 export const Navbar = (props?: AppProps) => {
   const [navbar, setNavbar] = useState(false);
@@ -9,8 +10,8 @@ export const Navbar = (props?: AppProps) => {
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="javascript:void(0)">
-              <h2 className="text-2xl font-bold">LOGO</h2>
+            <a href="/">
+              <h2 className="text-2xl font-bold">Logo</h2>
             </a>
             <div className="md:hidden">
               <button

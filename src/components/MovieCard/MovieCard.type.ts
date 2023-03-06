@@ -5,7 +5,10 @@ export type MovieCardProps = AppProps & {
 }
 
 export interface MovieInterface {
-    id: string;
+    id?: string;
+    _id?: string;
     imageUrl: string;
+    description: string;
     title: string;
+    price: string;
 }

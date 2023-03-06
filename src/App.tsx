@@ -8,6 +8,7 @@ import {
 import "./App.css";
 import { Home } from "./pages/Home/Home";
 import { Navbar } from "./components/Navbar/Navbar";
+import { AddForm, Details } from "./components";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,38 +17,28 @@ function App() {
       element: <Home />,
       // children: [
       //   {
-      //     path: "contact",
-      //     element: <Contact />,
+      //     path: "add",
+      //     element: <AddForm />,
       //   },
       //   {
-      //     path: "dashboard",
-      //     element: <Dashboard />,
-      //     loader: ({ request }) =>
-      //       fetch("/api/dashboard.json", {
-      //         signal: request.signal,
-      //       }),
-      //   },
-      //   {
-      //     element: <AuthLayout />,
-      //     children: [
-      //       {
-      //         path: "login",
-      //         element: <Login />,
-      //         loader: redirectIfUser,
-      //       },
-      //       {
-      //         path: "logout",
-      //         action: logoutUser,
-      //       },
-      //     ],
+      //     path: "detail/:id",
+      //     element: <Details />,
       //   },
       // ],
+    },
+    {
+      path: "add",
+      element: <AddForm />,
+    },
+    {
+      path: "detail/:id",
+      element: <Details />,
     },
   ]);
 
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar />
       <RouterProvider router={router} />
     </div>
   );
